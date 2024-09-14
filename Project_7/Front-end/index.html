@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from infinite.andevfrontend.site/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Sep 2024 09:48:59 GMT -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="lib/rater-js/rater-js.css" />
+    <link rel="stylesheet" href="lib/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="lib/metisMenu/metismenujs.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="assets/iziToast.min.css" />
+    <script src="assets/iziToast.min.js"></script>
+
+    <title>SmartTech</title>
+    <style>
+      #CategoryHedarText {
+        margin-left: 100px;
+        margin-right: 100px;
+      }
+
+      .relative-container {
+        position: relative;
+        width: 100%;
+        height: 500px;
+      }
+
+      /* التأثير الأساسي للصور */
+      @keyframes slideInFromRight {
+        from {
+          transform: translateX(150%); /* بداية الحركة من اليمين */
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0); /* النهاية في موضعها الطبيعي */
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInFromTop {
+        from {
+          transform: translateY(-150%); /* بداية الحركة من الأعلى */
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0); /* النهاية في موضعها الطبيعي */
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInFromLeft {
+        from {
+          transform: translateX(-150%); /* بداية الحركة من اليسار */
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0); /* النهاية في موضعها الطبيعي */
+          opacity: 1;
+        }
+      }
+
+      /* تطبيق التأثير على الصور */
+      .overlay-image {
+        position: absolute;
+        top: 278px;
+        left: 710px;
+        width: 438px;
+        height: auto;
+        animation: slideInFromRight 1s ease-out forwards;
+        animation-delay: 0s; /* تأخير الحركة */
+      }
+
+      .overla-image {
+        position: absolute;
+        top: 60px;
+        left: 400px;
+        width: 450px;
+        height: auto;
+        animation: slideInFromTop 1s ease-out forwards;
+        animation-delay: 0s; /* تأخير الحركة */
+      }
+
+      .overl-image {
+        position: absolute;
+        top: 300px;
+        left: 100px;
+        width: 317px;
+        height: auto;
+        animation: slideInFromLeft 1s ease-out forwards;
+        animation-delay: 0s; /* تأخير الحركة */
+      }
+
+      /* التأثير الأساسي للصور */
+      @keyframes slideInFromRigh {
+        from {
+          transform: translateX(150%); /* بداية الحركة من اليمين */
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0); /* النهاية في موضعها الطبيعي */
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInFromTo {
+        from {
+          transform: translateY(-150%); /* بداية الحركة من الأعلى */
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0); /* النهاية في موضعها الطبيعي */
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInFromLef {
+        from {
+          transform: translateX(-150%); /* بداية الحركة من اليسار */
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0); /* النهاية في موضعها الطبيعي */
+          opacity: 1;
+        }
+      }
+
+      /* تطبيق التأثير على الصور */
+      .overlayy-image {
+        position: absolute;
+        top: 252px;
+        left: 820px;
+        width: 331px;
+        height: auto;
+        animation: slideInFromRigh 1s ease-out forwards;
+        animation-delay: 0s;
+      }
+
+      .overlaa-image {
+        position: absolute;
+        top: 10px;
+        left: 456px;
+        width: 352px;
+        height: auto;
+        animation: slideInFromTo 1s ease-out forwards;
+        animation-delay: 0s;
+      }
+      .overll-image {
+        position: absolute;
+        top: 300px;
+        left: 100px;
+        width: 317px;
+        height: auto;
+        animation: slideInFromLef 1s ease-out forwards;
+        animation-delay: 0s; /* تأخير الحركة */
+      }
+      .py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    justify-content: space-around;
+}
+      @media (max-width: 425px) {
+        .nav-main a {
+          font-size: 0.5rem; /* Adjust to your preferred size */
+        }
+
+        .font-semibold {
+          font-weight: 100; /* Adjust to your preferred weight */
+          font-size: 1px; /* Adjust to your preferred size */
+          box-sizing: content-box; /* Ensure box-sizing is content-box or reset it */
+        }
+
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[#f5f7fe] font-montserrat font-medium text-default-500 lg:text-sm"
+  >
+    <div class="header sticky top-0 -z-[1]"></div>
+
+    <header
+      class="relative z-10 bg-[#f5f7fe] shadow-md transition-all duration-300"
+    >
+      <div class="container mx-auto px-4 sm:px-8 xl:px-4">
+        <div class="flex w-full items-center py-5 lg:justify-between">
+          <div
+            class="mr-5 cursor-pointer text-default-600 lg:hidden"
+            data-target=".modal-menu"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="pointer-events-none h-6 w-6"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </div>
+          <a href="index.html" class="mr-auto flex items-center gap-2 lg:mr-0">
+            <img
+              class="h-7"
+              src="../images/phone-store-logo-design-template-57d55d352f1fd851a6eecf7d1fbaef6e_screen-removebg-preview.png"
+              alt="logo"
+            />
+            <span class="text-2xl font-semibold text-primary-500">
+              Smart Tech
+            </span>
+          </a>
+          <form  class="hidden w-[590px] lg:flex" method="get" action="shop-grid.html">
+            <div class="relative w-full">
+              <input
+              name="keyword"
+                type="search"
+                id="search"
+                class="peer block w-full appearance-none rounded-l-lg border border-r-0 border-primary-500 bg-white px-2 pb-2 pt-4 text-sm focus:outline-none focus:ring-0"
+                placeholder=" "
+              />
+              <label
+                for="search"
+                class="z-1 pointer-events-none absolute left-2.5 top-[13px] origin-[0] -translate-y-3 scale-75 transform text-sm text-default-400 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-3 peer-focus:scale-75 peer-focus:text-primary-500"
+              >
+                Search
+              </label>
+            </div>
+            <button
+              class="rounded-r-lg bg-primary-500 p-[9px] text-white"
+              type="submit"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-6 w-6"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </form>
+          <div class="flex items-center gap-5">
+            <div
+              class="cursor-pointer text-default-600 hover:text-primary-500 lg:hidden"
+              data-target=".modal-search"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="pointer-events-none h-6 w-6"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            <span style="display: flex; flex-direction: row" id="batool">
+              <div class="relative inline-block text-left">
+                <!-- Sign In Button -->
+                <a
+                  class="items-center justify-center gap-1 text-default-600 hover:text-primary-500 lg:flex"
+                  href="#"
+                  id="signIn"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="h-6 w-6"
+                  >
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <span class="font-semibold">Sign In</span>
+                </a>
+
+                <!-- Dropdown Menu -->
+                <div
+                  class="absolute right-0 z-10 mt-2 hidden w-32 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  id="dropdownMenu"
+                >
+                  <div
+                    class="py-1"
+                    role="menu"
+                    aria-orientation="vertical"
+                    aria-labelledby="signIn"
+                  >
+                    <a
+                      href="sign-in.html"
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                      role="menuitem"
+                    >
+                      User
+                    </a>
+                    <a
+                      href="../Admin-Front/apps/e-commerce/admin/sign-in.html"
+                      class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                      role="menuitem"
+                    >
+                      Admin
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <a
+                class="hidden items-center justify-center gap-1 text-default-600 hover:text-primary-500 lg:flex"
+                href="sign-up.html"
+                id="signUp"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-6 w-6"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <span class="font-semibold">Sign Up</span>
+              </a>
+            </span>
+
+            <div
+              class="relative cursor-pointer select-none text-default-600 hover:text-primary-500"
+              data-target=".modal-cart"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="pointer-events-none h-6 w-6"
+              >
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path
+                  d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                ></path>
+              </svg>
+              <span
+              id="cartItemCount"
+                class="pointer-events-none absolute -right-2 -top-2 flex h-4 w-4 items-center justify-center rounded-full bg-primary-500 text-xs text-white"
+              >
+                0
+              </span>
+            </div>
+          </div>
+        </div>
+        <nav class="nav-main hidden items-center border-t-2 lg:flex">
+          <div
+            class="relative mr-5 flex items-center pr-5 font-semibold after:absolute after:right-0 after:my-auto after:h-6 after:w-px after:bg-slate-300 after:content-['']"
+          >
+            <ul class="metismenu">
+              <li>
+                <div
+                  class="sub-metismenu has-arrow flex cursor-pointer select-none items-center"
+                >
+                  <svg
+                    class="mr-4 h-6 w-6"
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 16 16"
+                    height="200px"
+                    width="200px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+                    ></path>
+                  </svg>
+                  <span class="mr-8 py-3 font-semibold">
+                    Browser All Category
+                  </span>
+                </div>
+                <ul
+                  class="metismenu-content z-[5] w-full rounded bg-[#f5f7fe] shadow-[0_2px_10px_rgba(131,125,125,.12)]"
+                  style="position: absolute"
+                  id="dropDownCategory"
+                ></ul>
+              </li>
+            </ul>
+          </div>
+          <ul class="flex gap-10 font-semibold">
+            <li>
+              <a
+                class="active relative block py-3 transition-all duration-300 after:absolute after:-bottom-[5px] after:-top-[2px] after:left-0 after:h-[2px] after:w-0 after:bg-primary-500 after:transition-all after:duration-300 after:content-[''] hover:text-primary-500 hover:after:w-full"
+                href="index.html"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                class="relative block py-3 transition-all duration-300 after:absolute after:-bottom-[5px] after:-top-[2px] after:left-0 after:h-[2px] after:w-0 after:bg-primary-500 after:transition-all after:duration-300 after:content-[''] hover:text-primary-500 hover:after:w-full"
+                href="shop-grid.html"
+                onclick="clearLocalStorage()"
+              >
+                Shop
+              </a>
+            </li>
+            <li>
+              <a
+                class="relative block py-3 transition-all duration-300 after:absolute after:-bottom-[5px] after:-top-[2px] after:left-0 after:h-[2px] after:w-0 after:bg-primary-500 after:transition-all after:duration-300 after:content-[''] hover:text-primary-500 hover:after:w-full"
+                href="about.html"
+              >
+                About Us
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="relative block py-3 transition-all duration-300 after:absolute after:-bottom-[5px] after:-top-[2px] after:left-0 after:h-[2px] after:w-0 after:bg-primary-500 after:transition-all after:duration-300 after:content-[''] hover:text-primary-500 hover:after:w-full"
+                href="contact.html"
+              >
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="my-5 overflow-hidden">
+      <div class="container mx-auto px-4 sm:px-8 xl:px-4">
+        <div
+          class="swiper swiper-hero group relative flex items-center rounded-lg"
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="relative-container">
+                <img
+                  src="../images/B.G-01.jpg"
+                  style="width: 100%; height: 500px"
+                  alt=""
+                />
+                <img
+                  src="../images/The Phone-01.jpg"
+                  class="overlay-image"
+                  alt=""
+                />
+                <img src="../images/Text-01.jpg" class="overla-image" alt="" />
+                <img
+                  src="../images/Accessory-01.jpg"
+                  class="overl-image"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="relative-container">
+                <img
+                  src="../images/B.G-01.jpg"
+                  style="width: 100%; height: 500px"
+                  alt=""
+                />
+                <img
+                  src="../images/Accessory-01111.jpg"
+                  class="overlayy-image"
+                  alt=""
+                />
+                <img
+                  src="../images/iPhone-Symbol.jpg"
+                  class="overlaa-image"
+                  alt=""
+                />
+                <img
+                  src="../images/ios-usb-c-cable-adapter.jpg"
+                  class="overll-image"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div
+            class="button-prev absolute -left-[999px] z-[1] hidden select-none rounded-xl bg-primary-500 px-4 py-2 text-white transition-all duration-300 hover:bg-primary-600 group-hover:left-3 sm:block"
+          >
+            &#10094;
+          </div>
+          <div
+            class="button-next absolute -right-[999px] z-[1] hidden select-none rounded-xl bg-primary-500 px-4 py-2 text-white transition-all duration-300 hover:bg-primary-600 group-hover:right-3 sm:block"
+          >
+            &#10095;
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="mb-8 flex items-center justify-between border-b-[3px] pb-2"
+      id="CategoryHedarText"
+    >
+      <h2
+        class="relative text-2xl font-bold text-default-600 after:absolute after:-bottom-[11px] after:left-0 after:h-[3px] after:w-full after:bg-primary-500 after:content-['']"
+      >
+        Category
+      </h2>
+    </div>
+    <div
+      class="relative w-full overflow-hidden after:absolute after:inset-0 after:z-[2] after:h-full after:w-full after:bg-black/50"
+    >
+      <div style="text-align: center; "
+        class="  container absolute inset-0 z-[4] mx-auto my-10 px-4 sm:px-8 xl:px-4"
+      ><span style="text-align: center; font-size: 30px; color:white">Categories</span>
+        <div class="flex h-full items-center"> 
+          <div
+            class="swiper swiper-categories group relative flex w-full items-center"
+          >
+            <div
+              class="swiper-wrapper select-none py-12"
+              id="categoryContainer"
+            ></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <img
+        class="parallax h-full max-h-[410px] w-full object-cover"
+        src="img/banner/banner-5.png"
+        alt="img"
+      />
+    </div>
+    <section class="container mx-auto px-4 sm:px-8 xl:px-4">
+      <div class="swiper swiper-cards relative my-10 overflow-hidden">
+        <div class="mb-8 flex items-center justify-between border-b-[3px] pb-2">
+          <h2
+            class="relative text-2xl font-bold text-default-600 after:absolute after:-bottom-[11px] after:left-0 after:h-[3px] after:w-full after:bg-primary-500 after:content-['']"
+          >
+            New Products
+          </h2>
+          <div class="flex items-center gap-1">
+            <div
+              class="button-prev select-none rounded-md bg-default-400 px-[10px] py-1 text-white transition-all duration-300 hover:bg-primary-500"
+            >
+              &#10094;
+            </div>
+            <div
+              class="button-next select-none rounded-md bg-default-400 px-[10px] py-1 text-white transition-all duration-300 hover:bg-primary-500"
+            >
+              &#10095;
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-wrapper" id="LatestProducts"></div>
+
+        <section class="container mx-auto my-10 px-4 sm:px-8 xl:px-4">
+          <div class="swiper swiper-gridcard relative my-10 overflow-hidden">
+            <div
+              class="mb-8 flex items-center justify-between border-b-[3px] pb-2"
+            >
+              <h2
+                class="relative text-2xl font-bold text-default-600 after:absolute after:-bottom-[11px] after:left-0 after:h-[3px] after:w-full after:bg-primary-500 after:content-['']"
+              >
+                Most Review
+              </h2>
+
+              <div class="flex items-center gap-1">
+                <div
+                  class="button-prev select-none rounded-md bg-default-400 px-[10px] py-1 text-white transition-all duration-300 hover:bg-primary-500"
+                >
+                  &#10094;
+                </div>
+                <div
+                  class="button-next select-none rounded-md bg-default-400 px-[10px] py-1 text-white transition-all duration-300 hover:bg-primary-500"
+                >
+                  &#10095;
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-wrapper" id="MostReview"></div>
+          </div>
+        </section>
+
+        <section class="container mx-auto my-10 px-4 sm:px-8 xl:px-4">
+          <div
+            class="mb-8 flex items-center justify-between border-b-[3px] pb-2"
+          >
+            <h2
+              class="relative text-2xl font-bold text-default-600 after:absolute after:-bottom-[11px] after:left-0 after:h-[3px] after:w-full after:bg-primary-500 after:content-['']"
+            >
+              Testimonials
+            </h2>
+          </div>
+          <div
+            class="swiper swiper-testimonials group relative flex items-center rounded-lg pb-10"
+          >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide h-auto">
+                <div class="h-full rounded-xl bg-white p-10">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 16 16"
+                    class="text-5xl text-primary-400/50"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"
+                    ></path>
+                  </svg>
+                  <em class="my-4 flex">
+                    "Excellent selection of smartphones and accessories. The
+                    website is user-friendly, and I had a great experience
+                    finding the perfect tech gadgets for my needs. Highly
+                    recommend!"
+                  </em>
+                  <figure class="mt-auto flex gap-4">
+                    <div class="h-[50px] w-[50px] overflow-hidden rounded-full">
+                      <img src="img/client/client1.jpg" alt="Client 1" />
+                    </div>
+                    <div>
+                      <h3 class="font-semibold">Emma Davis</h3>
+                      <span class="text-primary-500">Tech Enthusiast</span>
+                      <div class="rater my-2" data-rater="5"></div>
+                    </div>
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide h-auto">
+                <div class="h-full rounded-xl bg-white p-10">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 16 16"
+                    class="text-5xl text-primary-400/50"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"
+                    ></path>
+                  </svg>
+                  <em class="my-4 flex">
+                    "I've been buying from this store for years, and the quality
+                    of products and customer service never disappoints. Great
+                    place for all your tech needs!"
+                  </em>
+                  <figure class="mt-auto flex gap-4">
+                    <div class="h-[50px] w-[50px] overflow-hidden rounded-full">
+                      <img src="img/client/client2.jpg" alt="Client 2" />
+                    </div>
+                    <div>
+                      <h3 class="font-semibold">John Brown</h3>
+                      <span class="text-primary-500">Business Owner</span>
+                      <div class="rater my-2" data-rater="5"></div>
+                    </div>
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide h-auto">
+                <div class="h-full rounded-xl bg-white p-10">
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 16 16"
+                    class="text-5xl text-primary-400/50"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"
+                    ></path>
+                  </svg>
+                  <em class="my-4 flex">
+                    "Shopping at this tech store has always been a pleasure.
+                    Fast delivery, excellent products, and friendly customer
+                    service. Highly recommended!"
+                  </em>
+                  <figure class="mt-auto flex gap-4">
+                    <div class="h-[50px] w-[50px] overflow-hidden rounded-full">
+                      <img src="img/client/client3.jpg" alt="Client 3" />
+                    </div>
+                    <div>
+                      <h3 class="font-semibold">Sophie Williams</h3>
+                      <span class="text-primary-500">Freelancer</span>
+                      <div class="rater my-2" data-rater="5"></div>
+                    </div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </section>
+
+        <section class="container mx-auto my-10 px-4 sm:px-8 xl:px-4">
+          <div
+            class="mb-8 flex items-center justify-between border-b-[3px] pb-2"
+          >
+            <h2
+              class="relative text-2xl font-bold text-default-600 after:absolute after:-bottom-[11px] after:left-0 after:h-[3px] after:w-full after:bg-primary-500 after:content-['']"
+            >
+              Our Brands
+            </h2>
+          </div>
+          <div class="swiper swiper-brands group relative flex items-center">
+            <div class="swiper-wrapper flex select-none items-center">
+              <div class="swiper-slide">
+                <a href="#">
+                  <img
+                    class="object-contain grayscale filter transition-all duration-300 hover:filter-none"
+                    src="img/brands/amd-logo.png"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img
+                    class="object-contain grayscale filter transition-all duration-300 hover:filter-none"
+                    src="img/brands/asrock-logo.png"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img
+                    class="object-contain grayscale filter transition-all duration-300 hover:filter-none"
+                    src="img/brands/asus-logo.png"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img
+                    class="object-contain grayscale filter transition-all duration-300 hover:filter-none"
+                    src="img/brands/corsair-logo.png"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img
+                    class="object-contain grayscale filter transition-all duration-300 hover:filter-none"
+                    src="img/brands/genius-logo.png"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img
+                    class="object-contain grayscale filter transition-all duration-300 hover:filter-none"
+                    src="img/brands/gigabyte-logo.png"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img
+                    class="object-contain grayscale filter transition-all duration-300 hover:filter-none"
+                    src="img/brands/hp-logo.png"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img
+                    class="object-contain grayscale filter transition-all duration-300 hover:filter-none"
+                    src="img/brands/intel-logo.png"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img
+                    class="object-contain grayscale filter transition-all duration-300 hover:filter-none"
+                    src="img/brands/kingston-logo.png"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img
+                    class="object-contain grayscale filter transition-all duration-300 hover:filter-none"
+                    src="img/brands/lenovo-logo.png"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img
+                    class="object-contain grayscale filter transition-all duration-300 hover:filter-none"
+                    src="img/brands/logitech-logo.png"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img
+                    class="object-contain grayscale filter transition-all duration-300 hover:filter-none"
+                    src="img/brands/msi-logo.png"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img
+                    class="object-contain grayscale filter transition-all duration-300 hover:filter-none"
+                    src="img/brands/nvidia-logo.png"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img
+                    class="object-contain grayscale filter transition-all duration-300 hover:filter-none"
+                    src="img/brands/philips-logo.png"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img
+                    class="object-contain grayscale filter transition-all duration-300 hover:filter-none"
+                    src="img/brands/redragon-logo.png"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#">
+                  <img
+                    class="object-contain grayscale filter transition-all duration-300 hover:filter-none"
+                    src="img/brands/samsung-logo.png"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <div class="modal-cart modal-container modal-overlay">
+      <div
+        class="modal-content modal-right flex h-full w-[400px] min-w-[250px] flex-col bg-[#f5f7fe]"
+      >
+        <div class="w-full">
+          <div class="border-b-2 p-5">
+            <h3 class="text-lg font-bold text-default-600">Shopping Cart</h3>
+          </div>
+          <button
+            class="close-modal absolute right-5 top-5 p-[3px] text-default-600"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-6 w-6"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="h-full overflow-auto">
+          <div class="flex flex-col items-center p-10" id="cartItemsModalDiv">
+            <div id="cartItemsList">
+              <h1>This is cart</h1>
+            </div>
+            <span id="cartIsEmpty" class="my-5"
+              >Your shopping cart is empty!</span
+            >
+            <a
+              class="block rounded-md bg-primary-500 px-4 py-3 text-center font-bold text-white transition-all duration-300 hover:bg-primary-600"
+              href="shopping-cart.html"
+            >
+              Checkout
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-primary-500 text-default-200">
+      <div
+        class="mx-auto px-4 sm:px-8 xl:px-4"
+        style="max-width: 100% !important"
+      >
+        <div class="hidden lg:block">
+          <div class="grid grid-cols-12 gap-x-20 gap-y-10 pt-10">
+            <div class="col-span-4">
+              <h1
+                class="relative mb-5 pb-2 text-lg font-semibold text-white after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-16 after:bg-primary-300 after:content-['']"
+              >
+                <a
+                  href="index.html"
+                  class="mr-auto flex items-center gap-2 lg:mr-0"
+                >
+                  <img
+                    class="h-7"
+                    src="../images/phone-store-logo-design-template-57d55d352f1fd851a6eecf7d1fbaef6e_screen-removebg-preview.png"
+                    alt="logo"
+                  />
+                  <span class="text-2xl font-semibold text-white">
+                    Smart Tech
+                  </span>
+                </a>
+              </h1>
+              <p class="leading-6">
+                Smart Tech is your go-to destination for the latest in
+                innovative technology, offering a curated selection of
+                cutting-edge smartphones, tablets, and accessories. We are
+                dedicated to delivering high-quality products and exceptional
+                customer service to enhance your digital experience.
+              </p>
+            </div>
+            <div class="col-span-4">
+              <h1
+                class="relative mb-5 pb-2 text-lg font-semibold text-white after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-16 after:bg-primary-300 after:content-['']"
+              >
+                Quick Links
+              </h1>
+              <ul>
+                <li class="pb-2">
+                  <a
+                    class="transition-all duration-300 hover:text-white"
+                    href="index.html"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li class="pb-2">
+                  <a
+                    class="transition-all duration-300 hover:text-white"
+                    href="shop-grid.html"
+                  >
+                    Shop
+                  </a>
+                </li>
+                <li class="pb-2">
+                  <a
+                    class="transition-all duration-300 hover:text-white"
+                    href="about.html"
+                  >
+                    About us
+                  </a>
+                </li>
+                <li class="pb-2">
+                  <a
+                    class="transition-all duration-300 hover:text-white"
+                    href="contact.html"
+                  >
+                    Contact us
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-span-4">
+              <h1
+                class="relative mb-5 pb-2 text-lg font-semibold text-white after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-16 after:bg-primary-300 after:content-['']"
+              >
+                Contact Us
+              </h1>
+              <ul>
+                <li class="flex items-center gap-2 pb-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span>Irbid-Jordan</span>
+                </li>
+                <li class="flex items-center gap-2 pb-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"
+                    />
+                    <path
+                      d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"
+                    />
+                  </svg>
+
+                  <a
+                    class="transition-all duration-300 hover:text-white"
+                    href="#"
+                  >
+                    Email SmartTech@example.com
+                  </a>
+                </li>
+                <li class="flex items-center gap-2 pb-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span>(+962)123456789</span>
+                </li>
+              </ul>
+              <div class="flex items-center gap-5 pt-5">
+                <a
+                  class="transition-all duration-300 hover:text-white"
+                  href="#"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="h-6 w-6"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  class="transition-all duration-300 hover:text-white"
+                  href="#"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 512 512"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  class="transition-all duration-300 hover:text-white"
+                  href="#"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="h-6 w-6"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="col-span-12 flex flex-col items-center gap-2 border-t border-slate-400 py-5 text-xs"
+            >
+              <span class="text-white">
+                Copyright ©
+                <span class="current-year"></span>
+                SmartTech
+              </span>
+              <p>
+                <a
+                  class="transition-all duration-300 hover:text-white"
+                  href="#"
+                >
+                  Privacy Policy
+                </a>
+                &#183;
+                <a
+                  class="transition-all duration-300 hover:text-white"
+                  href="#"
+                >
+                  Terms And Conditions
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:hidden">
+          <ul class="metismenu py-5">
+            <li class="transition-all duration-300">
+              <div
+                class="sub-metismenu has-arrow cursor-pointer py-3 font-bold text-white"
+                aria-expanded="false"
+                role="menu"
+              >
+                About Information
+              </div>
+              <div class="metismenu-content">
+                <p class="leading-6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+                  odit. Quia praesentium doloribus quasi minima.
+                </p>
+                <div class="mt-2 flex gap-3">
+                  <a class="h-10" href="#">
+                    <img
+                      class="h-full"
+                      src="img/logo-googleplay.png"
+                      alt="logo google play"
+                    />
+                  </a>
+                  <a class="h-10" href="#">
+                    <img
+                      class="h-full"
+                      src="img/logo-appstore.png"
+                      alt="logo app store"
+                    />
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="transition-all duration-300">
+              <div
+                class="sub-metismenu has-arrow cursor-pointer py-3 font-bold text-white"
+                aria-expanded="false"
+                role="menu"
+              >
+                Quick Links
+              </div>
+              <div class="metismenu-content">
+                <ul>
+                  <li class="pb-2">
+                    <a
+                      class="transition-all duration-300 hover:text-white"
+                      href="index.html"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li class="pb-2">
+                    <a
+                      class="transition-all duration-300 hover:text-white"
+                      href="about.html"
+                    >
+                      About us
+                    </a>
+                  </li>
+                  <li class="pb-2">
+                    <a
+                      class="transition-all duration-300 hover:text-white"
+                      href="contact.html"
+                    >
+                      Contact us
+                    </a>
+                  </li>
+                  <li class="pb-2">
+                    <a
+                      class="transition-all duration-300 hover:text-white"
+                      href="blog.html"
+                    >
+                      Blog
+                    </a>
+                  </li>
+                  <li class="pb-2">
+                    <a
+                      class="transition-all duration-300 hover:text-white"
+                      href="shop-mixed.html"
+                    >
+                      New products
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="transition-all duration-300">
+              <div
+                class="sub-metismenu has-arrow cursor-pointer py-3 font-bold text-white"
+                aria-expanded="false"
+                role="menu"
+              >
+                Contact Us
+              </div>
+              <div class="metismenu-content">
+                <ul>
+                  <li class="flex items-center gap-2 pb-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="h-6 w-6"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span>Av. Colon 1234, Buenos Aires, Argentina</span>
+                  </li>
+                  <li class="flex items-center gap-2 pb-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="h-6 w-6"
+                    >
+                      <path
+                        d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"
+                      />
+                      <path
+                        d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"
+                      />
+                    </svg>
+
+                    <a
+                      class="transition-all duration-300 hover:text-white"
+                      href="#"
+                    >
+                      SmartTech@example.com
+                    </a>
+                  </li>
+                  <li class="flex items-center gap-2 pb-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="h-6 w-6"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span>(+54) 2284-123456789</span>
+                  </li>
+                </ul>
+                <div class="flex items-center gap-5 pt-5">
+                  <a
+                    class="transition-all duration-300 hover:text-white"
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="h-6 w-6"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    class="transition-all duration-300 hover:text-white"
+                    href="#"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <a
+                    class="transition-all duration-300 hover:text-white"
+                    href="#"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="h-6 w-6"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div
+            class="flex flex-col items-center gap-2 border-t border-slate-400 py-5 text-xs"
+          >
+            <span class="text-white">
+              Copyright ©
+              <span class="current-year"></span>
+              Example.
+            </span>
+            <p>
+              <a class="transition-all duration-300 hover:text-white" href="#">
+                Privacy Policy
+              </a>
+              &#183;
+              <a class="transition-all duration-300 hover:text-white" href="#">
+                Terms And Conditions
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Toggle dropdown menu visibility
+      const signInButton = document.getElementById("signIn");
+      const dropdownMenu = document.getElementById("dropdownMenu");
+
+      signInButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        dropdownMenu.classList.toggle("hidden");
+      });
+
+      // Hide the dropdown menu when clicking outside of it
+      document.addEventListener("click", function (event) {
+        if (
+          !signInButton.contains(event.target) &&
+          !dropdownMenu.contains(event.target)
+        ) {
+          dropdownMenu.classList.add("hidden");
+        }
+      });
+    </script>
+    <script src="js/navbarCart.js"></script>
+    <script src="lib/simpleParallax/simpleParallax.min.js"></script>
+    <script src="lib/rater-js/rater-js.js"></script>
+    <script src="lib/swiper/swiper-bundle.min.js"></script>
+    <script src="lib/metisMenu/metismenujs.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/ChangeNav.js"></script>
+  </body>
+
+  <!-- Mirrored from infinite.andevfrontend.site/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Sep 2024 09:49:34 GMT -->
+</html>
